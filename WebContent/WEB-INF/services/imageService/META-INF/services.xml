@@ -1,0 +1,13 @@
+	<!-- name属性配置WebService的名称 -->
+<service name="ImageService">
+	<description>Web Service</description>
+	<!-- ServiceClass属性配置提供WebService服务类的全类名 -->
+	<parameter name="ServiceClass">cn.wangtao34.webservice.pic.VerifyCodeService
+	</parameter>
+	<messageReceivers>
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-only"
+			class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+		<messageReceiver mep="http://www.w3.org/ns/wsdl/in-out"
+			class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+	</messageReceivers>
+</service>
